@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
-public class Taller {
+public class Taller<T extends Reparable & Coloreable> {
 	
 	double precioManoObra;
 	
@@ -25,6 +25,12 @@ public class Taller {
 		fechaEntregaDate.setTime(29/2/2016);
 		}
 
+	public void admitirReparacion (T r) {
+		for (Averia averia : r.getAverias()) {
+			
+		}
+	}
+	
 	public double getPresupuesto (Vehiculo vehiculo) {
 		double presupuesto = 0;
 		for (Averia averia : vehiculo.averias) {
